@@ -78,7 +78,7 @@ public class NRC721FullBase extends NRC721EnumerableBase {
     }
 
     protected void mintWithTokenURIBase(Address to, BigInteger tokenId, String tokenURI) {
-        this.setTokenURI(tokenId, tokenURI);
         super.mintBase(to, tokenId);
+        this.setTokenURI(tokenId, tokenURI);
     }
 }
