@@ -124,6 +124,7 @@ public class NRC721EnumerableBase extends NRC721Base implements INRC721Enumerabl
         LinkedList<BigInteger> tokens = ownedTokens.get(to);
         if(tokens == null) {
             tokens = new LinkedList<BigInteger>();
+            ownedTokens.put(to, tokens);
         }
         ownedTokensIndex.put(tokenId, tokens.size());
         tokens.add(tokenId);
